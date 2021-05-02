@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TopReposService } from '../services/top-repos.service'
+import { take } from 'rxjs/operators'
 
 @Component({
   selector: 'app-top-repos-list',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopReposListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private topReposService: TopReposService) { }
 
   ngOnInit(): void {
+    this.getTopRepos();
+  }
+
+  getTopRepos() {
+    this.topReposService.getTopRepos().pipe(take(1)).subscribe(res => {
+      console.log(res);
+
+    })
   }
 
 }
