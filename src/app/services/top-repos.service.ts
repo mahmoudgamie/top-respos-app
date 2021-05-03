@@ -22,7 +22,9 @@ export class TopReposService {
         name: item.name,
         description: item.description,
         stargazers_count: item.stargazers_count,
-        open_issues_count: item.open_issues_count
+        open_issues_count: item.open_issues_count,
+        avatar_url: item.owner.avatar_url,
+        username: item.owner.login
       }))
     })))
   }

@@ -4,4 +4,6 @@ export interface Repo {
   name: string;
   open_issues_count: number;
   stargazers_count: number;
+  avatar_url: string;
+  username: string;
 }
