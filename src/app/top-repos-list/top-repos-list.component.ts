@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TopReposService } from '../services/top-repos.service'
 import { take } from 'rxjs/operators'
+import { Repo } from '../models/repo';
+import { Response } from '../models/response'
 
 @Component({
   selector: 'app-top-repos-list',
@@ -9,16 +11,18 @@ import { take } from 'rxjs/operators'
 })
 export class TopReposListComponent implements OnInit {
 
+  topRepos: Repo[]
+
   constructor(private topReposService: TopReposService) { }
 
   ngOnInit(): void {
     this.getTopRepos();
   }
 
-  getTopRepos() {
-    this.topReposService.getTopRepos().pipe(take(1)).subscribe(res => {
-      console.log(res);
-
+  getTopRepos(): void {
+    this.topReposService.getTopRepos().pipe(take(1)).subscribe((res: Response) => {
+      this.topRepos = res.items
+      console.log(this.topRepos);
     })
   }
 
