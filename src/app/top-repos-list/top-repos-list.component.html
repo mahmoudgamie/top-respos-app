@@ -1,6 +1,6 @@
 <div style="margin: '30px'; border: '2px solid black'; border-radius: '4px'; padding: '20px';" *ngFor="let r of topRepos">
-<img style="max-width: '140px';" [src]="r.avatar_url" alt="">
+<img style="max-width: '140px';" [src]="r.owner.avatar_url" alt="">
 <p><strong>Repo Name: </strong>{{r.name}}</p>
 <p><strong>Description: </strong>{{r.description}}</p>
-<p><strong>Username: </strong>{{r.username}}</p>
+<p><strong>Username: </strong>{{r.owner.login}}</p>
 </div>
