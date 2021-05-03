@@ -12,6 +12,7 @@ import { Response } from '../models/response'
 export class TopReposListComponent implements OnInit {
 
   topRepos: Repo[]
+  response: Response;
 
   constructor(private topReposService: TopReposService) { }
 
@@ -19,9 +20,10 @@ export class TopReposListComponent implements OnInit {
     this.getTopRepos();
   }
 
-  getTopRepos(): void {
-    this.topReposService.getTopRepos().pipe(take(1)).subscribe((res: Response) => {
-      this.topRepos = res.items
+  getTopRepos(pageNumber = 1): void {
+    this.topReposService.getTopRepos(pageNumber).pipe(take(1)).subscribe((res: Response) => {
+      this.response = res;
+      this.topRepos = this.response.items;
       console.log(this.topRepos);
     })
   }
