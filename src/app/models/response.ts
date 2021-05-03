@@ -1,5 +1,7 @@
+import { Repo } from "./repo";
+
 export interface Response {
   incomplete_results: boolean;
-  items: any[];
+  items: Repo[];
   total_count: number;
 }
