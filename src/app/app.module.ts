@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TopReposListComponent } from './top-repos-list/top-repos-list.component';
 
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { NgxUiLoaderModule } from "ngx-ui-loader";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
   imports: [
     BrowserModule,
     HttpClientModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    NgxUiLoaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
