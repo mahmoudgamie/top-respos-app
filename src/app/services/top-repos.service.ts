@@ -18,10 +18,11 @@ export class TopReposService {
     return this.http.get<Response>(this.baseUrl, { params: { page: pageNumber.toString() } })
       .pipe(map(res => ({
         ...res,
-        items: res.items.map(item => <Repo>({
+        items: res.items.map<Repo>(item => ({
           id: item.id,
           name: item.name,
           description: item.description,
+          created_at: item.created_at,
           stargazers_count: item.stargazers_count,
           open_issues_count: item.open_issues_count,
           owner: {
