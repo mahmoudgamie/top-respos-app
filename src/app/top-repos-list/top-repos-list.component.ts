@@ -37,6 +37,7 @@ export class TopReposListComponent implements OnInit {
   }
 
   onScroll() {
+    if (!this.response.incomplete_results) return;
     this.currentPage++;
     this.getTopRepos(this.currentPage);
   }
