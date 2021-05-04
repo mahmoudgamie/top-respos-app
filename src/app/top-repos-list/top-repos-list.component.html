@@ -1,20 +1,21 @@
 <div class="container-fluid">
   <div class="search-results" infiniteScroll [infiniteScrollDistance]="3" [infiniteScrollThrottle]="1000"
     (scrolled)="onScroll()">
-    <div class="row shadow p-3 m-5 bg-white border border-primary rounded" *ngFor="let r of topRepos">
+    <div class="row shadow p-3 m-5 bg-white border border-primary rounded" *ngFor="let repo of topRepos">
       <div class="col-md-12">
         <div id="content" class="content content-full-width">
           <div class="profile">
             <div class="profile-header">
               <div class="profile-header-content">
                 <div class="profile-header-img">
-                  <img [src]="r.owner.avatar_url" [alt]="r.name + ' avatar'">
+                  <img [src]="repo.owner.avatar_url" [alt]="repo.name + ' avatar'">
                 </div>
                 <div class="profile-header-info">
-                  <h4 class="m-t-10 m-b-5">{{ r.name }}</h4>
-                  <p class="m-b-10">{{ r.description }}</p>
-                  <span class="badge bg-info mr-3 p-2">Stars: {{r.stargazers_count}}</span>
-                  <span class="badge bg-info mr-3 p-2">Issues: {{r.open_issues_count}}</span>
+                  <h4 class="m-t-10 m-b-5">{{ repo.name }}</h4>
+                  <p class="m-b-10">{{ repo.description }}</p>
+                  <span class="badge bg-info mr-3 p-2">Stars: {{repo.stargazers_count}}</span>
+                  <span class="badge bg-info mr-3 p-2">Issues: {{repo.open_issues_count}}</span>
+                  <span>Submitted {{ repo.created_at }} by {{ repo.owner.login }}</span>
                 </div>
               </div>
             </div>
