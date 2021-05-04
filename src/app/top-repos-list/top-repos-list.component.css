@@ -1,0 +1,23 @@
+.profile-header .profile-header-content, .profile-header-info {
+  padding: 25px;
+}
+
+.profile-header-img {
+  float: left;
+  width: 160px;
+  height: 120px;
+  padding: 3px;
+  background: #fff;
+}
+
+.profile-header-img img {
+  max-width: 100%;
+}
+
+.profile-header-info h4 {
+  font-weight: 500;
+}
+
+.profile-header-img + .profile-header-info {
+  margin-left: 180px;
+}

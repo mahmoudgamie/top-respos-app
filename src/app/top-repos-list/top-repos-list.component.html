@@ -1,15 +1,26 @@
-<div class="search-results"
-infiniteScroll
-[infiniteScrollDistance]="3"
-[infiniteScrollThrottle]="1000"
-(scrolled)="onScroll()">
-  <div style="margin: '30px'; border: '2px solid black'; border-radius: '4px'; padding: '20px';"
-    *ngFor="let r of topRepos">
-    <img style="max-width: '140px';" [src]="r.owner.avatar_url" alt="">
-    <p><strong>Repo Name: </strong>{{r.name}}</p>
-    <p><strong>Description: </strong>{{r.description}}</p>
-    <p><strong>Username: </strong>{{r.owner.login}}</p>
-    <p><strong>Stars: </strong>{{r.stargazers_count}}</p>
-    <p><strong>Issues: </strong>{{r.open_issues_count}}</p>
+<div class="container-fluid">
+  <div class="search-results" infiniteScroll [infiniteScrollDistance]="3" [infiniteScrollThrottle]="1000"
+    (scrolled)="onScroll()">
+    <div class="row shadow p-3 m-5 bg-white border border-primary rounded" *ngFor="let r of topRepos">
+      <div class="col-md-12">
+        <div id="content" class="content content-full-width">
+          <div class="profile">
+            <div class="profile-header">
+              <div class="profile-header-content">
+                <div class="profile-header-img">
+                  <img [src]="r.owner.avatar_url" [alt]="r.name + ' avatar'">
+                </div>
+                <div class="profile-header-info">
+                  <h4 class="m-t-10 m-b-5">{{ r.name }}</h4>
+                  <p class="m-b-10">{{ r.description }}</p>
+                  <span class="badge bg-info mr-3 p-2">Stars: {{r.stargazers_count}}</span>
+                  <span class="badge bg-info mr-3 p-2">Issues: {{r.open_issues_count}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
