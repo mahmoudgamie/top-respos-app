@@ -15,7 +15,7 @@ export class TopReposListComponent implements OnInit {
   topRepos: Repo[] = [];
   response: Response;
   currentPage: number = 1;
-  err: string = ''
+  error: string = ''
   constructor(private topReposService: TopReposService, private loader: NgxUiLoaderService) { }
 
   ngOnInit(): void {
@@ -31,8 +31,9 @@ export class TopReposListComponent implements OnInit {
         this.response = res;
         this.topRepos = this.topRepos.concat(res.items);
         this.loader.stopBackground();
+        this.error = '';
       }, err => {
-        this.err = err;
+        this.error = err;
         this.currentPage = 1;
         this.topRepos = [];
         this.loader.stopBackground();
