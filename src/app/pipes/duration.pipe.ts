@@ -3,6 +3,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({
   name: 'duration'
 })
+
+/** @brief Changes the create_at date to duration */
 export class DurationPipe implements PipeTransform {
 
   transform(value: string, ...args: unknown[]): unknown {
