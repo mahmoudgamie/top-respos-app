@@ -7,7 +7,10 @@ import { TopReposListComponent } from './top-repos-list/top-repos-list.component
 
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { NgxUiLoaderModule } from "ngx-ui-loader";
+
 import { DurationPipe } from './pipes/duration.pipe';
+
+import { AppRoutingModule } from './app.routing.module'
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import { DurationPipe } from './pipes/duration.pipe';
     BrowserModule,
     HttpClientModule,
     InfiniteScrollModule,
-    NgxUiLoaderModule
+    NgxUiLoaderModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
