@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TopReposService } from '../services/top-repos.service'
-import { IRepo } from '../models/repo';
-import { IResponse } from '../models/response';
+import { IResponse, IRepo } from '../models/response';
 import { debounceTime, distinctUntilChanged, take } from 'rxjs/operators';
 import { NgxUiLoaderService } from "ngx-ui-loader";
 

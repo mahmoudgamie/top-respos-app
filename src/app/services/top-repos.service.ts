@@ -2,8 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
-import { IResponse } from '../models/response'
-import { IRepo } from '../models/repo'
+import { IResponse, IRepo } from '../models/response'
 
 
 @Injectable({
