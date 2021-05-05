@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 import { Response } from '../models/response'
 import { Repo } from '../models/repo'
 
@@ -30,6 +30,8 @@ export class TopReposService {
             login: item.owner.login
           }
         }))
-      })))
+      })), catchError(err => {
+        throw new Error(err.statusText);
+      }))
   }
 }
