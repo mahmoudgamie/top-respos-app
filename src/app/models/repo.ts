@@ -1,10 +1,10 @@
-import { Owner } from "../models/owner";
-export interface Repo {
+import { IOwner } from "../models/owner";
+export interface IRepo {
   description: string;
   id: number;
   name: string;
   open_issues_count: number;
   stargazers_count: number;
-  owner: Owner,
+  owner: IOwner,
   created_at: string,
 }

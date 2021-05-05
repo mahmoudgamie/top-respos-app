@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
-import { Response } from '../models/response'
-import { Repo } from '../models/repo'
+import { IResponse } from '../models/response'
+import { IRepo } from '../models/repo'
 
 
 @Injectable({
@@ -14,11 +14,11 @@ export class TopReposService {
   baseUrl = 'https://api.github.com/search/repositories?q=created:>2017-10-22&per_page=10&sort=stars&order=desc';
   constructor(private http: HttpClient) { }
 
-  getTopRepos(pageNumber: number): Observable<Response> {
-    return this.http.get<Response>(this.baseUrl, { params: { page: pageNumber.toString() } })
+  getTopRepos(pageNumber: number): Observable<IResponse> {
+    return this.http.get<IResponse>(this.baseUrl, { params: { page: pageNumber.toString() } })
       .pipe(map(res => ({
         ...res,
-        items: res.items.map<Repo>(item => ({
+        items: res.items.map<IRepo>(item => ({
           id: item.id,
           name: item.name,
           description: item.description,

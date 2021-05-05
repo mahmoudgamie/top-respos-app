@@ -1,4 +1,4 @@
-export interface Owner {
+export interface IOwner {
   avatar_url: string;
   login: string;
 }

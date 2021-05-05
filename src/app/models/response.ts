@@ -1,7 +1,7 @@
-import { Repo } from "./repo";
+import { IRepo } from "./repo";
 
-export interface Response {
+export interface IResponse {
   incomplete_results: boolean;
-  items: Repo[];
+  items: IRepo[];
   total_count: number;
 }

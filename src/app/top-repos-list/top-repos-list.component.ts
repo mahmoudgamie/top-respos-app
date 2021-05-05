@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TopReposService } from '../services/top-repos.service'
-import { Repo } from '../models/repo';
-import { Response } from '../models/response';
+import { IRepo } from '../models/repo';
+import { IResponse } from '../models/response';
 import { debounceTime, distinctUntilChanged, take } from 'rxjs/operators';
 import { NgxUiLoaderService } from "ngx-ui-loader";
 
@@ -12,8 +12,8 @@ import { NgxUiLoaderService } from "ngx-ui-loader";
 })
 export class TopReposListComponent implements OnInit {
 
-  topRepos: Repo[] = [];
-  response: Response;
+  topRepos: IRepo[] = [];
+  response: IResponse;
   currentPage: number = 1;
   error: string = ''
   constructor(private topReposService: TopReposService, private loader: NgxUiLoaderService) { }
@@ -27,7 +27,7 @@ export class TopReposListComponent implements OnInit {
     this.topReposService.getTopRepos(pageNumber).pipe(
       take(1),
       debounceTime(500),
-      distinctUntilChanged()).subscribe((res: Response) => {
+      distinctUntilChanged()).subscribe((res: IResponse) => {
         this.response = res;
         this.topRepos = this.topRepos.concat(res.items);
         this.loader.stopBackground();
