@@ -31,7 +31,7 @@ export class TopReposService {
           }
         }))
       })), catchError(err => {
-        throw new Error(err.statusText);
+        throw new Error(err.name);
       }))
   }
 }
