@@ -1,27 +1,47 @@
+
+
 # TopReposApp
+===============================
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+## Table of Contents
 
-## Development server
+* [About](#about)
+* [Installing](#installing)
+* [Features](#features)
+* [Libraries](#libraries)
+* [APIs](#api)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## About
 
-## Code scaffolding
+A small webapp that will list the most starred Github repos that were created in the last 30 days.
+ 
+## Installing
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1- Clone the repo
+2- run `npm install`
+3- run `npm start`
+4- Navigate to `http://localhost:4200/`
 
-## Build
+## Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+1- List top starred repos from 30 days
+2- Paginate on scroll
 
-## Running unit tests
+## Libraries
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1- ngx-ui-loader
+This package provides very nice UI spinners with many options, and is very easy to implement.
+url: `https://github.com/t-ho/ngx-ui-loader`
 
-## Running end-to-end tests
+2- Bootstrap 4
+The very popular CSS framework for layout and styling.
+url: `https://getbootstrap.com/`
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+2- ngx-infinite-scroll
+Provides pagination on scrolling with direct implementation.
+url: `https://www.npmjs.com/package/ngx-infinite-scroll`
 
-## Further help
+## APIs
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1- `https://docs.github.com/en/rest/reference/search#search-repositories`
