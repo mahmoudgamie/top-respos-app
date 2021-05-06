@@ -29,9 +29,13 @@ A small webapp that will list the most starred Github repos that were created in
 
 ## Features
 
-1- List top starred repos from 30 days
+1- List top starred repos from 30 days.
 
-2- Paginate on scroll
+2- Paginate on scroll.
+
+3- Display spinner on API call.
+
+4- Display Error alert on error
 
 ## Pagination
 
