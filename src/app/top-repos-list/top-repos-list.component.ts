@@ -42,7 +42,7 @@ export class TopReposListComponent implements OnInit {
 
   /**@brief fetch more repos on scroll */
   onScroll() {
-    if (!this.response.incomplete_results) return;
+    if (this.response.incomplete_results) return;
     this.currentPage++;
     this.getTopRepos(this.currentPage);
   }
