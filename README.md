@@ -18,10 +18,10 @@ A small webapp that will list the most starred Github repos that were created in
  
 ## Installing
 
-1- Clone the repo
-2- run `npm install`
-3- run `npm start`
-4- Navigate to `http://localhost:4200/`
+1- Clone the repo.
+2- run `npm install`.
+3- run `npm start`.
+4- Navigate to `http://localhost:4200/`.
 
 ## Features
 
@@ -38,7 +38,7 @@ url: `https://github.com/t-ho/ngx-ui-loader`
 The very popular CSS framework for layout and styling.
 url: `https://getbootstrap.com/`
 
-2- ngx-infinite-scroll
+3- ngx-infinite-scroll
 Provides pagination on scrolling with direct implementation.
 url: `https://www.npmjs.com/package/ngx-infinite-scroll`
 
