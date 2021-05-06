@@ -19,13 +19,17 @@ A small webapp that will list the most starred Github repos that were created in
 ## Installing
 
 1- Clone the repo.
+
 2- run `npm install`.
+
 3- run `npm start`.
+
 4- Navigate to `http://localhost:4200/`.
 
 ## Features
 
 1- List top starred repos from 30 days
+
 2- Paginate on scroll
 
 ## Libraries
