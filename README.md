@@ -9,6 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * [About](#about)
 * [Installing](#installing)
 * [Features](#features)
+* [Pagination](#pagination)
 * [Libraries](#libraries)
 * [APIs](#api)
 
@@ -31,6 +32,10 @@ A small webapp that will list the most starred Github repos that were created in
 1- List top starred repos from 30 days
 
 2- Paginate on scroll
+
+## Pagination
+
+Number of items per page is 10, to easily fire infinite scroll.
 
 ## Libraries
 
