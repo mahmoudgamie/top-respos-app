@@ -44,16 +44,17 @@ Number of items per page is 10, to easily fire infinite scroll.
 ## Libraries
 
 1- ngx-ui-loader
-This package provides very nice UI spinners with many options, and is very easy to implement.
-url: `https://github.com/t-ho/ngx-ui-loader`
+This package provides very nice UI spinners with many options, and is very easy to implement.  
+[ngx-ui-loader](https://github.com/t-ho/ngx-ui-loader).
 
 2- Bootstrap 4
-The very popular CSS framework for layout and styling.
-url: `https://getbootstrap.com/`
+The very popular CSS framework for layout and styling.  
+[Bootstrap 4](https://github.com/t-ho/ngx-ui-loader).
 
 3- ngx-infinite-scroll
-Provides pagination on scrolling with direct implementation.
-url: `https://www.npmjs.com/package/ngx-infinite-scroll`
+Provides pagination on scrolling with direct implementation.  
+[ngx-infinite-scroll](https://www.npmjs.com/package/ngx-infinite-scroll).
+
 
 ## APIs
 
