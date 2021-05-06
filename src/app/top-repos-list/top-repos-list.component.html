@@ -27,7 +27,7 @@
                   <p class="m-b-10">{{ repo.description }}</p>
                   <span class="badge bg-info mr-3 p-2">Stars: {{repo.stargazers_count}}</span>
                   <span class="badge bg-info mr-3 p-2">Issues: {{repo.open_issues_count}}</span>
-                  <span>Submitted {{ repo.created_at | duration}} by {{ repo.owner.login }}</span>
+                  <span>Submitted {{ repo.created_at | duration}} by <strong>{{ repo.owner.login }}</strong></span>
                 </div>
               </div>
             </div>
